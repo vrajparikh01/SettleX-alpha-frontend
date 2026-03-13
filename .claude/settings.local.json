@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls e:/EXPLORE/Vraj/SettleX-frontend/*.json e:/EXPLORE/Vraj/SettleX-frontend/*.js e:/EXPLORE/Vraj/SettleX-frontend/*.cjs e:/EXPLORE/Vraj/SettleX-frontend/*.ts)"
+    ]
+  }
+}
