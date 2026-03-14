@@ -402,7 +402,7 @@ function Admin() {
               </div>
             </div>
           </div>
-          <div className="mt-8">
+{/* <div className="mt-8">
             <div className="flex items-center justify-between">
               <p className="text-xl font-semibold text-baseWhiteDark whitespace-nowrap">
                 Equity
@@ -452,7 +452,7 @@ function Admin() {
             />
           ) : (
             <></>
-          )}
+          )} */}
           {isAddTokenModalOpen ? (
             <AddTokenModal
               closeModal={() => {
