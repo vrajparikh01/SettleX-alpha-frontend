@@ -1,20 +1,36 @@
 [
-  { "inputs": [], "stateMutability": "nonpayable", "type": "constructor" },
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
   {
     "inputs": [
-      { "internalType": "address", "name": "owner", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      }
     ],
     "name": "OwnableInvalidOwner",
     "type": "error"
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "account", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
     ],
     "name": "OwnableUnauthorizedAccount",
     "type": "error"
   },
-  { "inputs": [], "name": "ReentrancyGuardReentrantCall", "type": "error" },
+  {
+    "inputs": [],
+    "name": "ReentrancyGuardReentrantCall",
+    "type": "error"
+  },
   {
     "anonymous": false,
     "inputs": [
@@ -103,22 +119,51 @@
             "name": "WantToReceiveToken",
             "type": "address"
           },
-          { "internalType": "address", "name": "trader", "type": "address" },
+          {
+            "internalType": "address",
+            "name": "trader",
+            "type": "address"
+          },
           {
             "internalType": "enum OpenMarket.LotType",
             "name": "lotType",
             "type": "uint8"
           },
-          { "internalType": "uint256", "name": "amtSold", "type": "uint256" },
-          { "internalType": "uint256", "name": "status", "type": "uint256" },
-          { "internalType": "bool", "name": "isBroker", "type": "bool" },
-          { "internalType": "uint256", "name": "brokerFee", "type": "uint256" },
+          {
+            "internalType": "uint256",
+            "name": "amtSold",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "status",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isBroker",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "brokerFee",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "brokerFeeScale",
+            "type": "uint256"
+          },
           {
             "internalType": "address",
             "name": "brokerAddress",
             "type": "address"
           },
-          { "internalType": "uint256", "name": "timestamp", "type": "uint256" }
+          {
+            "internalType": "uint256",
+            "name": "timestamp",
+            "type": "uint256"
+          }
         ],
         "indexed": false,
         "internalType": "struct OpenMarket.Trades",
@@ -153,22 +198,51 @@
             "name": "WantToReceiveToken",
             "type": "address"
           },
-          { "internalType": "address", "name": "trader", "type": "address" },
+          {
+            "internalType": "address",
+            "name": "trader",
+            "type": "address"
+          },
           {
             "internalType": "enum OpenMarket.LotType",
             "name": "lotType",
             "type": "uint8"
           },
-          { "internalType": "uint256", "name": "amtSold", "type": "uint256" },
-          { "internalType": "uint256", "name": "status", "type": "uint256" },
-          { "internalType": "bool", "name": "isBroker", "type": "bool" },
-          { "internalType": "uint256", "name": "brokerFee", "type": "uint256" },
+          {
+            "internalType": "uint256",
+            "name": "amtSold",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "status",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isBroker",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "brokerFee",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "brokerFeeScale",
+            "type": "uint256"
+          },
           {
             "internalType": "address",
             "name": "brokerAddress",
             "type": "address"
           },
-          { "internalType": "uint256", "name": "timestamp", "type": "uint256" }
+          {
+            "internalType": "uint256",
+            "name": "timestamp",
+            "type": "uint256"
+          }
         ],
         "internalType": "struct OpenMarket.Trades",
         "name": "_trade",
@@ -182,9 +256,21 @@
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "_tradeIndex", "type": "uint256" },
-      { "internalType": "uint256", "name": "_offerAmount", "type": "uint256" },
-      { "internalType": "uint256", "name": "_receiveAmount", "type": "uint256" }
+      {
+        "internalType": "uint256",
+        "name": "_tradeIndex",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_offerAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_receiveAmount",
+        "type": "uint256"
+      }
     ],
     "name": "executeTrade",
     "outputs": [],
@@ -195,18 +281,41 @@
     "inputs": [],
     "name": "getCommissionInformation",
     "outputs": [
-      { "internalType": "uint256", "name": "", "type": "uint256" },
-      { "internalType": "uint256", "name": "", "type": "uint256" }
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
     ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "_trader", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "_trader",
+        "type": "address"
+      }
     ],
     "name": "getLastAddedTradeIndex",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
@@ -236,22 +345,51 @@
             "name": "WantToReceiveToken",
             "type": "address"
           },
-          { "internalType": "address", "name": "trader", "type": "address" },
+          {
+            "internalType": "address",
+            "name": "trader",
+            "type": "address"
+          },
           {
             "internalType": "enum OpenMarket.LotType",
             "name": "lotType",
             "type": "uint8"
           },
-          { "internalType": "uint256", "name": "amtSold", "type": "uint256" },
-          { "internalType": "uint256", "name": "status", "type": "uint256" },
-          { "internalType": "bool", "name": "isBroker", "type": "bool" },
-          { "internalType": "uint256", "name": "brokerFee", "type": "uint256" },
+          {
+            "internalType": "uint256",
+            "name": "amtSold",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "status",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isBroker",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "brokerFee",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "brokerFeeScale",
+            "type": "uint256"
+          },
           {
             "internalType": "address",
             "name": "brokerAddress",
             "type": "address"
           },
-          { "internalType": "uint256", "name": "timestamp", "type": "uint256" }
+          {
+            "internalType": "uint256",
+            "name": "timestamp",
+            "type": "uint256"
+          }
         ],
         "internalType": "struct OpenMarket.Trades[]",
         "name": "",
@@ -264,7 +402,13 @@
   {
     "inputs": [],
     "name": "owner",
-    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
@@ -286,6 +430,11 @@
         "internalType": "uint256",
         "name": "_commissionPercentage",
         "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_scale",
+        "type": "uint256"
       }
     ],
     "name": "setCommissionToken",
@@ -295,7 +444,11 @@
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "newOwner", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
     ],
     "name": "transferOwnership",
     "outputs": [],

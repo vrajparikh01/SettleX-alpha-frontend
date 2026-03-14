@@ -1,20 +1,36 @@
 [
-  { "inputs": [], "stateMutability": "nonpayable", "type": "constructor" },
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
   {
     "inputs": [
-      { "internalType": "address", "name": "owner", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      }
     ],
     "name": "OwnableInvalidOwner",
     "type": "error"
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "account", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
     ],
     "name": "OwnableUnauthorizedAccount",
     "type": "error"
   },
-  { "inputs": [], "name": "ReentrancyGuardReentrantCall", "type": "error" },
+  {
+    "inputs": [],
+    "name": "ReentrancyGuardReentrantCall",
+    "type": "error"
+  },
   {
     "anonymous": false,
     "inputs": [
@@ -156,9 +172,21 @@
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "_tokenAddress", "type": "address" },
-      { "internalType": "uint256", "name": "_tgeStart", "type": "uint256" },
-      { "internalType": "uint256", "name": "_tgeEnd", "type": "uint256" }
+      {
+        "internalType": "address",
+        "name": "_tokenAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_tgeStart",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_tgeEnd",
+        "type": "uint256"
+      }
     ],
     "name": "addToken",
     "outputs": [],
@@ -167,7 +195,11 @@
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "_offerId", "type": "uint256" }
+      {
+        "internalType": "uint256",
+        "name": "_offerId",
+        "type": "uint256"
+      }
     ],
     "name": "cancelOffer",
     "outputs": [],
@@ -176,7 +208,11 @@
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "_offerId", "type": "uint256" },
+      {
+        "internalType": "uint256",
+        "name": "_offerId",
+        "type": "uint256"
+      },
       {
         "internalType": "uint256",
         "name": "_contributionAmount",
@@ -232,8 +268,16 @@
             "name": "CollateralTokenAmount",
             "type": "uint256"
           },
-          { "internalType": "address", "name": "creator", "type": "address" },
-          { "internalType": "uint256", "name": "amtSold", "type": "uint256" }
+          {
+            "internalType": "address",
+            "name": "creator",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amtSold",
+            "type": "uint256"
+          }
         ],
         "internalType": "struct PreMarket.Offer",
         "name": "_offer",
@@ -247,7 +291,11 @@
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "_offerId", "type": "uint256" }
+      {
+        "internalType": "uint256",
+        "name": "_offerId",
+        "type": "uint256"
+      }
     ],
     "name": "distributeAfter24HoursBuy",
     "outputs": [],
@@ -256,8 +304,16 @@
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "_offerId", "type": "uint256" },
-      { "internalType": "address", "name": "contributor", "type": "address" }
+      {
+        "internalType": "uint256",
+        "name": "_offerId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "contributor",
+        "type": "address"
+      }
     ],
     "name": "distributeAfter24HoursSell",
     "outputs": [],
@@ -266,7 +322,11 @@
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "_offerId", "type": "uint256" }
+      {
+        "internalType": "uint256",
+        "name": "_offerId",
+        "type": "uint256"
+      }
     ],
     "name": "distributeBuyPartialCreator",
     "outputs": [],
@@ -275,8 +335,16 @@
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "_offerId", "type": "uint256" },
-      { "internalType": "address", "name": "contributor", "type": "address" }
+      {
+        "internalType": "uint256",
+        "name": "_offerId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "contributor",
+        "type": "address"
+      }
     ],
     "name": "distributeTokensBuy",
     "outputs": [],
@@ -285,7 +353,11 @@
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "_offerId", "type": "uint256" }
+      {
+        "internalType": "uint256",
+        "name": "_offerId",
+        "type": "uint256"
+      }
     ],
     "name": "distributeTokensSell",
     "outputs": [],
@@ -294,9 +366,21 @@
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "_tokenAddress", "type": "address" },
-      { "internalType": "uint256", "name": "_tgeStart", "type": "uint256" },
-      { "internalType": "uint256", "name": "_tgeEnd", "type": "uint256" }
+      {
+        "internalType": "address",
+        "name": "_tokenAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_tgeStart",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_tgeEnd",
+        "type": "uint256"
+      }
     ],
     "name": "editTimestamps",
     "outputs": [],
@@ -305,53 +389,110 @@
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "_tokenAddress", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "_tokenAddress",
+        "type": "address"
+      }
     ],
     "name": "getCommissionBalance",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
     "name": "getCommissionPercentage",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "_offerId", "type": "uint256" },
-      { "internalType": "address", "name": "_contributor", "type": "address" }
+      {
+        "internalType": "uint256",
+        "name": "_offerId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_contributor",
+        "type": "address"
+      }
     ],
     "name": "getContributionAmount",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "_offerId", "type": "uint256" }
+      {
+        "internalType": "uint256",
+        "name": "_offerId",
+        "type": "uint256"
+      }
     ],
     "name": "getContributors",
     "outputs": [
-      { "internalType": "address[]", "name": "", "type": "address[]" }
+      {
+        "internalType": "address[]",
+        "name": "",
+        "type": "address[]"
+      }
     ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "_trader", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "_trader",
+        "type": "address"
+      }
     ],
     "name": "getLastAddedOfferIndex",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "uint256", "name": "index", "type": "uint256" }
+      {
+        "internalType": "uint256",
+        "name": "index",
+        "type": "uint256"
+      }
     ],
     "name": "getOfferDetails",
     "outputs": [
@@ -392,8 +533,16 @@
             "name": "CollateralTokenAmount",
             "type": "uint256"
           },
-          { "internalType": "address", "name": "creator", "type": "address" },
-          { "internalType": "uint256", "name": "amtSold", "type": "uint256" }
+          {
+            "internalType": "address",
+            "name": "creator",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amtSold",
+            "type": "uint256"
+          }
         ],
         "internalType": "struct PreMarket.Offer",
         "name": "",
@@ -405,14 +554,26 @@
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "_tokenAddress", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "_tokenAddress",
+        "type": "address"
+      }
     ],
     "name": "getTokenDetails",
     "outputs": [
       {
         "components": [
-          { "internalType": "uint256", "name": "tgeStart", "type": "uint256" },
-          { "internalType": "uint256", "name": "tgeEnd", "type": "uint256" }
+          {
+            "internalType": "uint256",
+            "name": "tgeStart",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tgeEnd",
+            "type": "uint256"
+          }
         ],
         "internalType": "struct PreMarket.TokenDetails",
         "name": "",
@@ -424,7 +585,11 @@
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "_trader", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "_trader",
+        "type": "address"
+      }
     ],
     "name": "getUserOffers",
     "outputs": [
@@ -465,8 +630,16 @@
             "name": "CollateralTokenAmount",
             "type": "uint256"
           },
-          { "internalType": "address", "name": "creator", "type": "address" },
-          { "internalType": "uint256", "name": "amtSold", "type": "uint256" }
+          {
+            "internalType": "address",
+            "name": "creator",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amtSold",
+            "type": "uint256"
+          }
         ],
         "internalType": "struct PreMarket.Offer[]",
         "name": "",
@@ -479,7 +652,13 @@
   {
     "inputs": [],
     "name": "owner",
-    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
@@ -496,6 +675,11 @@
         "internalType": "uint256",
         "name": "_commissionPercentage",
         "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_scale",
+        "type": "uint256"
       }
     ],
     "name": "setCommission",
@@ -505,7 +689,11 @@
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "newOwner", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
     ],
     "name": "transferOwnership",
     "outputs": [],
