@@ -228,7 +228,8 @@ function OfferSection() {
       </div>
       <div className="flex items-center flex-1 gap-x-2">
         <p className="text-base font-medium text-baseWhiteDark whitespace-nowrap">
-          OTC/OTC Broker Commission:{" "}
+          {/* OTC/OTC Broker Commission:{" "} */}
+          OTC Commission:{" "}
         </p>
         {otcCommissionEdit ? (
           <>

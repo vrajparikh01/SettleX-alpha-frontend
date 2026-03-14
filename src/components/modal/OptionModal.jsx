@@ -85,7 +85,7 @@ function OptionModal({ handleNextBtnClick, closeModal }) {
               OTC
             </p>
           </button>
-          <button
+          {/* <button
             className={`flex-1 flex flex-col items-center justify-center py-5 border ${
               selectedOption == "otcBroker"
                 ? "border-theme-warning"
@@ -114,7 +114,7 @@ function OptionModal({ handleNextBtnClick, closeModal }) {
             >
               OTC Broker
             </p>
-          </button>
+          </button> */}
         </div>
         <Button
           variant="PrimaryButton"

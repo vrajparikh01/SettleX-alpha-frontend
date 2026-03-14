@@ -4,13 +4,13 @@ import { createConfig, http } from "@wagmi/core";
 const CONTRACTS = {
   otc: {
     11155111: import.meta.env.VITE_OTC_CONTRACT_SEPOLIA, // Sepolia
-    137:      import.meta.env.VITE_OTC_CONTRACT_POLYGON,  // Polygon
-    8453:     import.meta.env.VITE_OTC_CONTRACT_BASE,     // Base
+    137: import.meta.env.VITE_OTC_CONTRACT_POLYGON,  // Polygon
+    8453: import.meta.env.VITE_OTC_CONTRACT_BASE,     // Base
   },
   premarket: {
     11155111: import.meta.env.VITE_PREMARKET_CONTRACT_SEPOLIA, // Sepolia
-    137:      import.meta.env.VITE_PREMARKET_CONTRACT_POLYGON,  // Polygon
-    8453:     import.meta.env.VITE_PREMARKET_CONTRACT_BASE,     // Base
+    137: import.meta.env.VITE_PREMARKET_CONTRACT_POLYGON,  // Polygon
+    8453: import.meta.env.VITE_PREMARKET_CONTRACT_BASE,     // Base
   },
 };
 
@@ -30,16 +30,17 @@ export const getTransactionUrl = (chainId) => {
 export const config = createConfig({
   appName: "OTC App",
   projectId: "OTC_PROJECT_ID",
-  chains: import.meta.env.VITE_ENV === "production" ? [polygon, base] : [sepolia],
+  chains: import.meta.env.VITE_ENV === "production" ? [polygon, base, sepolia] : [sepolia],
   transports:
     import.meta.env.VITE_ENV === "production"
       ? {
-          [polygon.id]: http(import.meta.env.VITE_POLYGON_RPC_URL),
-          [base.id]:    http(import.meta.env.VITE_BASE_RPC_URL),
-        }
+        [polygon.id]: http(import.meta.env.VITE_POLYGON_RPC_URL),
+        [base.id]: http(import.meta.env.VITE_BASE_RPC_URL),
+        [sepolia.id]: http(import.meta.env.VITE_RPC_URL)
+      }
       : {
-          [sepolia.id]: http(import.meta.env.VITE_RPC_URL),
-        },
+        [sepolia.id]: http(import.meta.env.VITE_RPC_URL),
+      },
   // chains: [sepolia],
   // transports: {
   //   [sepolia.id]: http(import.meta.env.VITE_RPC_URL),

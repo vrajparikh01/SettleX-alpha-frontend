@@ -63,7 +63,7 @@ function Dashboard() {
   const tabs = [
     { label: "Premarket", value: "premarket" },
     { label: "OTC", value: "otc" },
-    { label: "OTC Broker", value: "broker" },
+    // { label: "OTC Broker", value: "broker" },
   ];
   const [activeTab, setActiveTab] = useState(tabs[0]);
   const urlParams = new URLSearchParams(search);
