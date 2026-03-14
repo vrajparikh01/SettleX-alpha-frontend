@@ -116,6 +116,7 @@ function Dashboard() {
             0, // Status (0=Open,2=Closed)
             trade?.is_broker, // isBroker
             trade?.broker_fee, // BrokerFree
+            1,
             trade?.receiver_wallet_address, // Recipent Address
             Date.now(), // Time Stamp
           ],

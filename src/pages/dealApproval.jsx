@@ -153,6 +153,7 @@ function DealApproval() {
             0, // Status (0=Open,2=Closed)
             true, // isBroker
             dealData?.broker_fee, // BrokerFree
+            1,
             dealData?.broker_address, // Recipent Address
             Date.now(), // Time Stamp
           ],
