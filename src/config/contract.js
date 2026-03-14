@@ -14,6 +14,7 @@ const CONTRACTS = {
   },
 };
 
+
 export const otc_contract = (chainId) => CONTRACTS.otc[chainId];
 export const premarket_contract = (chainId) => CONTRACTS.premarket[chainId];
 

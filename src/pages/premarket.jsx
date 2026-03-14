@@ -57,32 +57,32 @@ function Premarket() {
   ];
 
   const [activeTab, setActiveTab] = useState(tabs[0]);
-  const banners = [
-    {
-      icon: "https://dropsearn.fra1.cdn.digitaloceanspaces.com/static/cache/c1/ae/c1ae0fe3692014be6ee12de3c977ff73.webp",
-      title: "Berachain",
-      view: 4152,
-      iconTheme: "#012E0F",
-    },
-    {
-      icon: "https://dropsearn.fra1.cdn.digitaloceanspaces.com/static/cache/02/cb/02cb7cf282bda2ac3c0c5fa0c606b2b9.webp",
-      title: "Babylon",
-      view: 4152,
-      iconTheme: "#03111C",
-    },
-    {
-      icon: "https://dropsearn.fra1.cdn.digitaloceanspaces.com/static/cache/35/11/3511e07bc97e43bb93e5f387b553e7a8.webp",
-      title: "Symbiotic",
-      view: 4152,
-      iconTheme: "#F20176",
-    },
-    {
-      icon: "https://dropsearn.fra1.cdn.digitaloceanspaces.com/static/cache/d6/bd/d6bdba24d30ce698279771160266e963.webp",
-      title: "Solanex AI",
-      view: 4152,
-      iconTheme: "#110000",
-    },
-  ];
+const banners = [
+  {
+    icon: "https://avatars.githubusercontent.com/u/130374431?s=200&v=4", // Berachain
+    title: "Berachain",
+    view: 4152,
+    iconTheme: "#012E0F",
+  },
+  {
+    icon: "https://avatars.githubusercontent.com/u/120397847?s=200&v=4", // Babylon
+    title: "Babylon",
+    view: 4152,
+    iconTheme: "#03111C",
+  },
+  {
+    icon: "https://avatars.githubusercontent.com/u/163572955?s=200&v=4", // Symbiotic
+    title: "Symbiotic",
+    view: 4152,
+    iconTheme: "#F20176",
+  },
+  {
+    icon: "https://avatars.githubusercontent.com/u/179229932?s=200&v=4", // Solanex AI
+    title: "Solanex AI",
+    view: 4152,
+    iconTheme: "#110000",
+  },
+];
 
   async function getTrades(page = 1, searchText = "") {
     try {
