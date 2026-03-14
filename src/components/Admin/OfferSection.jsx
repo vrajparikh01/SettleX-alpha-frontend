@@ -29,6 +29,10 @@ function OfferSection() {
     useState();
   const [loadingCommission, setLoadingCommission] = useState(false);
 
+  const [premarketScale, setPremarketScale] = useState(100);
+  const [otcScale, setOtcScale] = useState(100);
+  const [otcType, setOtcType] = useState(1);
+
   async function getPremarketCommission() {
     try {
       const commission = await readContract(config, {
@@ -38,9 +42,13 @@ function OfferSection() {
         args: [],
       });
       console.log("Commission", commission);
-      if (commission) {
-        setPremarketCommissionPercentage(Number(commission));
-        setEditPremarketCommissionPercentage(Number(commission));
+      if (commission && commission.length >= 2) {
+        const val = Number(commission[0]);
+        const scale = Number(commission[1]);
+        const displayVal = val / scale;
+        setPremarketCommissionPercentage(displayVal);
+        setEditPremarketCommissionPercentage(displayVal);
+        setPremarketScale(scale);
         return true;
       }
     } catch (error) {
@@ -51,12 +59,19 @@ function OfferSection() {
 
   async function updatePremarketCommission() {
     setLoadingCommission(true);
+    let scale = 1;
+    let valStr = String(editPremarketCommissionPercentage);
+    if (valStr.includes(".")) {
+      scale = Math.pow(10, valStr.split(".")[1].length);
+    }
+    const finalVal = Math.round(Number(editPremarketCommissionPercentage) * scale);
+
     try {
       const commissionContractHash = await writeContractAsync({
         address: premarket_contract(account?.chainId),
         abi: PremarketAbi,
         functionName: "setCommission",
-        args: [editPremarketCommissionPercentage],
+        args: [finalVal, scale],
       });
       console.log("Commission", commissionContractHash);
       const approveConfirmation = await waitForTransactionReceipt(config, {
@@ -93,9 +108,16 @@ function OfferSection() {
         args: [],
       });
       console.log("OTC Commission", commission);
-      if (commission) {
-        setOtcCommissionPercentage(Number([commission[1]]));
-        setEditOtcCommissionPercentage(Number(commission[1]));
+      if (commission && commission.length >= 3) {
+        setOtcType(Number(commission[0]));
+        
+        const val = Number(commission[1]);
+        const scale = Number(commission[2]);
+        const displayVal = val / scale;
+
+        setOtcCommissionPercentage(displayVal);
+        setEditOtcCommissionPercentage(displayVal);
+        setOtcScale(scale);
         return true;
       }
     } catch (error) {
@@ -106,12 +128,19 @@ function OfferSection() {
 
   async function updateOTCCommission() {
     setLoadingCommission(true);
+    let scale = 1;
+    let valStr = String(editOtcCommissionPercentage);
+    if (valStr.includes(".")) {
+      scale = Math.pow(10, valStr.split(".")[1].length);
+    }
+    const finalVal = Math.round(Number(editOtcCommissionPercentage) * scale);
+
     try {
       const commissionContractHash = await writeContractAsync({
         address: otc_contract(account?.chainId),
         abi: OTCAbi,
         functionName: "setCommissionToken",
-        args: [1, editOtcCommissionPercentage],
+        args: [otcType, finalVal, scale],
       });
       console.log("OTC Commission", commissionContractHash);
       const approveConfirmation = await waitForTransactionReceipt(config, {
